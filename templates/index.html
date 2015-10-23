@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+
+			h5 {
+				margin-bottom: 20px;
+				margin-left: 17%;
+				margin-right: 17%;
+				text-align: center;
+				line-height: 25px;
+
+			}
+
+			h2 {
+
+			font-size: 40px;
+			display: inline;
+			line-height: 80px;
+			padding-top: 20px;
+			color: #009688;
+
+			}
+
+			h3 {
+				color: #009688;
+			}
+
+			h4{
+				text-align: center;
+			}
+
+			body{
+				margin-top: 0;
+				margin: 0;
+				background-color: #ECECEC;
+				font-family: 'Lato', Calibri, Arial, sans-serif;
+				color: #656569;
+				letter-spacing: 1px;
+			}
+
+			.col-lg-12 {
+				background-color: #FFFFFF;
+			}
+
+			.eersteblok {
+				background-color: white;
+				text-align:center;
+				height: 20%;
+			}
+			.tweedeblok {
+				background-color: #4DB6AC;
+				margin: 0 auto;
+			}
+			.buttons {
+				width: 87%;
+				margin: 0 auto;
+			}
+
+			.derdeblok {
+				width: 60%;
+				margin: 0 auto;
+			}
+			.buttons2 {
+				width: 63%;
+				margin: 0 auto;
+			}
+
+			.vierdeblok {
+				background-color: white;
+				width: 61%;
+				margin: 0 auto;
+
+				margin-bottom: 50px;
+			}
+
+			.stardogbox {
+				padding: 10px;
+			}
+
+			.btn {
+				border: none;
+				font-family: inherit;
+				font-size: inherit;
+				color: inherit;
+				background: none;
+				cursor: pointer;
+				padding: 20px 50px;
+				display: inline-block;
+				margin: 15px 30px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-weight: 700;
+				outline: none;
+				position: relative;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+
+			.btn:after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+
+			/* Button 1 */
+			.btn-1 {
+				border: 3px solid #fff;
+				color: #fff;
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+			.btn-1a:hover,
+			.btn-1a:active {
+				color: #4DB6AC;
+				background: #fff;
+			}
+
+			/* Button 2 */
+			.btn-2 {
+				background-color: white;
+				border: 3px solid white;
+				color: #4DB6AC;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+
+			.btn-2a:hover,
+			.btn-2a:active {
+				border: 3px solid #4DB6AC;
+				color: #4DB6AC;
+				background: #fff;
+			}
+
+			ul {
+			    list-style: none;
+			    padding:5px;
+			    margin:0;
+			}
+
+			li { 
+				border-bottom: 1px solid #D5D5D5;
+			    padding-left: 1em; 
+			    text-indent: -.75em;
+			    padding-bottom: 5px;
+			    padding-top: 5px;
+			    line-height: 20px;
+			}
+
+			li:before {
+			    content: "• ";
+			    color: #4DB6AC;
+			}
+
+			a:link {
+				color: #009688;
+			}
+			a:visited {
+				color: #009688;
+			}
+
+
+
+
+
+
+
+		</style>
+	</head>
+
+	<body>
+		<div class='eersteblok'>
+					<h2><b>Travel Recommendations</b></h2>
+					<h4>Maryse van Dalen (mdn383) & Carmen Fortuin (cfn440) </h4>
+					<h5>Are you searching for the perfect holiday where you can do a lot of interesting activities but don’t know where to go? You came to the right place! Imagine your perfect holiday and what you want to do on that holiday. Do you want to get active, relax or discover the culture? Choose the type of traveller that you feel like will represents you the best. Are you interested in art and culture? The European Art Lover suits you. If rollercoasters and theme parks excite you, choose the Fun-Fair Enthusiast. Rather take it a little bit relaxer on your holiday and experience the hiking trails? Go for the Happy Hiker! Are you a real daredevil and want to go literally on top, select the Everest Mountaineer.</h5>
+					<h4>Select a button and discover unique locations and activities that you have never experienced before.</h4>
+
+		</div>
+
+		<div class="tweedeblok">
+			<div class="buttons">
+				<button class="btn btn-1 btn-1a"  onclick="buttonAction(1)">European Art Lover</button>
+				<button class="btn btn-1 btn-1a"  onclick="buttonAction(2)">Happy Hiker</button>
+				<button class="btn btn-1 btn-1a"  onclick="buttonAction(3)">Everest Mountaineer</button>
+				<button class="btn btn-1 btn-1a"  onclick="buttonAction(4)">Fun-fair Enthousiast</button>
+			</div> 
+		</div>
+
+
+		<div class='derdeblok'>
+			<h3>Input <small color="black">Get results with or without inferencing </small></h3>
+				
+			<textarea id='query14' class='sparql' style='width: 100%; padding: 10px; padding-left:15px; color:#656569; ' rows='10'>
+
+</textarea>
+				<div class="buttons2">
+					<button id="reason" class="btn btn-2 btn-2a">No Inferencing</button>
+					<button id="reason" class="btn btn-2 btn-2a">Inferencing</button>
+				</div>
+				<h3>Output</h3>
+		</div>
+		<div class='vierdeblok'>
+				<div id="linktarget14" class="stardogbox" style='height: 15em; scroll: both; overflow: auto;'>This is where the server response will appear.</div>
+	
+		</div>
+
+
+
+		<script src='{{ url_for("static", filename="js/jquery-1.11.0.min.js") }}' type='text/javascript'></script>
+		<script src='{{ url_for("static", filename="js/tutorial.js") }}' type='text/javascript'></script>
+
+
+	</body>
+</head>
